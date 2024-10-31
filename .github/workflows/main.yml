@@ -11,7 +11,37 @@ on:
 
 name: Main Workflow
 jobs:
-  sonarqube:
+  sonarqube-10_7_0-develor:
+    runs-on: ubuntu-latest
+    services:
+      sonarqube:
+        image: sonarqube:10.7.0-developer
+        ports:
+          - 9000:9000
+        volumes:
+          - sonarqube_data:/opt/sonarqube/data
+          - sonarqube_logs:/opt/sonarqube/logs
+          - sonarqube_extensions:/opt/sonarqube/extensions
+        options: >-
+          --health-cmd "grep -Fq \"SonarQube is operational\" /opt/sonarqube/logs/sonar.log"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        # Disabling shallow clones is recommended for improving the relevancy of reporting
+        fetch-depth: 0
+
+    - name: Dart Scan
+      uses: sonarsource/sonarqube-scan-action@jh/experiment_composite_action
+      env:
+        SONAR_HOST_URL: http://localhost:9000
+      with:
+        args: -Dsonar.projectKey=dart-project -Dsonar.login=admin -Dsonar.password=admin --debug
+        projectBaseDir: ./dart-project
+
+  sonarqube-9_9_7-developer:
     runs-on: ubuntu-latest
     services:
       sonarqube:
@@ -32,10 +62,59 @@ jobs:
       with:
         # Disabling shallow clones is recommended for improving the relevancy of reporting
         fetch-depth: 0
-    - name: SonarQube Scan
+
+    - name: .NET Scan
       uses: sonarsource/sonarqube-scan-action@jh/experiment_composite_action
       env:
         SONAR_HOST_URL: http://localhost:9000
       with:
-        args: -Dsonar.projectKey=dart-tools-test1 -Dsonar.login=admin -Dsonar.password=admin --debug
-        projectBaseDir: .
+        args: -Dsonar.projectKey=dotnet-project -Dsonar.login=admin -Dsonar.password=admin --debug
+        projectBaseDir: ./dotnet-project
+
+    - name: Java Gradle Build
+      run: gradle build
+      working-directory: ./java-gradle-project
+
+    - name: Java Gradle Scan
+      uses: sonarsource/sonarqube-scan-action@jh/experiment_composite_action
+      env:
+        SONAR_HOST_URL: http://localhost:9000
+      with:
+        args: -Dsonar.projectKey=java-gradle-project -Dsonar.login=admin -Dsonar.password=admin --debug
+        projectBaseDir: ./java-gradle-project
+
+    - name: Java Mvn Build
+      run: mvn clean install
+      working-directory: ./java-mvn-project
+
+    - name: Java Mvn Scan
+      uses: sonarsource/sonarqube-scan-action@jh/experiment_composite_action
+      env:
+        SONAR_HOST_URL: http://localhost:9000
+      with:
+        args: -Dsonar.projectKey=java-mvn-project -Dsonar.login=admin -Dsonar.password=admin --debug
+        projectBaseDir: ./java-mvn-project
+
+    - name: Kotlin Gradle Build
+      run: gradle build
+      working-directory: ./kotlin-gradle-project
+
+    - name: Kotlin Gradle Scan
+      uses: sonarsource/sonarqube-scan-action@jh/experiment_composite_action
+      env:
+        SONAR_HOST_URL: http://localhost:9000
+      with:
+        args: -Dsonar.projectKey=kotlin-gradle-project -Dsonar.login=admin -Dsonar.password=admin --debug
+        projectBaseDir: ./kotlin-gradle-project
+
+    - name: Kotlin Mvn Build
+      run: mvn clean install
+      working-directory: ./kotlin-mvn-project
+
+    - name: Kotlin Mvn Scan
+      uses: sonarsource/sonarqube-scan-action@jh/experiment_composite_action
+      env:
+        SONAR_HOST_URL: http://localhost:9000
+      with:
+        args: -Dsonar.projectKey=kotlin-mvn-project -Dsonar.login=admin -Dsonar.password=admin --debug
+        projectBaseDir: ./kotlin-mvn-project
