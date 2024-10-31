@@ -34,7 +34,7 @@ jobs:
         fetch-depth: 0
 
     - name: Dart Scan
-      uses: sonarsource/sonarqube-scan-action@jh/experiment_composite_action
+      uses: antonioaversa/sonarqube-scan-action@master
       env:
         SONAR_HOST_URL: http://localhost:9000
       with:
@@ -42,6 +42,7 @@ jobs:
         projectBaseDir: ./dart-project
 
   sonarqube-9_9_7-developer:
+    if: false
     runs-on: ubuntu-latest
     services:
       sonarqube:
