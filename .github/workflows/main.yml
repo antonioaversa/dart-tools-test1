@@ -37,5 +37,5 @@ jobs:
       env:
         SONAR_HOST_URL: http://localhost:9000
       with:
-        args: -Dsonar.projectKey=dart-tools-test1 -Dsonar.login=admin -Dsonar.password=admin
+        args: -Dsonar.projectKey=dart-tools-test1 -Dsonar.login=admin -Dsonar.password=admin --debug
         projectBaseDir: .
