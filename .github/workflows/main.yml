@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       sonarqube:
-        image: sonarqube:10.7.0-developer
+        image: sonarqube:9.9.7-developer
         ports:
           - 9000:9000
         volumes:
