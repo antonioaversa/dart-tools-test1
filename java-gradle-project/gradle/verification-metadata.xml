@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<verification-metadata xmlns="https://schema.gradle.org/dependency-verification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://schema.gradle.org/dependency-verification https://schema.gradle.org/dependency-verification/dependency-verification-1.3.xsd">
+   <configuration>
+      <verify-metadata>false</verify-metadata>
+      <verify-signatures>false</verify-signatures>
+      <trusted-artifacts>
+         <trust file=".*-javadoc[.]jar" regex="true" reason="https://docs.gradle.org/8.9/userguide/dependency_verification.html#sec:skipping-javadocs"/>
+         <trust file=".*-sources[.]jar" regex="true" reason="https://docs.gradle.org/8.9/userguide/dependency_verification.html#sec:skipping-javadocs"/>
+         <trust file="gradle-[0-9.]+-src.zip" regex="true" reason="https://docs.gradle.org/8.9/userguide/dependency_verification.html#sec:skipping-javadocs"/>
+      </trusted-artifacts>
+   </configuration>
+   <components>
+      <component group="ch.qos.logback" name="logback-classic" version="1.2.9">
+         <artifact name="logback-classic-1.2.9.jar">
+            <sha256 value="ad745cc243805800d1ebbf5b7deba03b37c95885e6bce71335a73f7d6d0f14ee" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="ch.qos.logback" name="logback-core" version="1.2.9">
+         <artifact name="logback-core-1.2.9.jar">
+            <sha256 value="4a9ef7ed809b1fbc6992bf87d404087c247e7a9766e25bb84377b58ed5c9eb58" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.diffplug.durian" name="durian-collect" version="1.2.0">
+         <artifact name="durian-collect-1.2.0.jar">
+            <sha256 value="b194c0b88021cc116c21c1dc76f49c2c1fe175af5bcb74c8ba67b9dbbf9a48cc" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.diffplug.durian" name="durian-core" version="1.2.0">
+         <artifact name="durian-core-1.2.0.jar">
+            <sha256 value="17ed0aacb3a3c16323332168bbdead8694f32800b2b47d69d4a4c49b114d5dae" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.diffplug.durian" name="durian-io" version="1.2.0">
+         <artifact name="durian-io-1.2.0.jar">
+            <sha256 value="095fd1dc77888c073f0be39a018156ee526722798b09de9e285ef2135e16eac4" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.diffplug.durian" name="durian-swt.os" version="4.2.0">
+         <artifact name="durian-swt.os-4.2.0.jar">
+            <sha256 value="f21e572bf9fbb549a998cb7e2f79b6b9a3ab9623371ac130b12509523f7b748f" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.diffplug.durian" name="durian-swt.os" version="4.2.2">
+         <artifact name="durian-swt.os-4.2.2.jar">
+            <sha256 value="6b531c6b4be581a8b32ead861ddc15c2c93b20c665fb4d33e0381483c24445f4" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.diffplug.spotless" name="spotless-lib" version="2.45.0">
+         <artifact name="spotless-lib-2.45.0.jar">
+            <sha256 value="b25969972e1d980280ca2ae529197ed9b3160aae48b506cf1935f01bd1318667" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.diffplug.spotless" name="spotless-lib-extra" version="2.45.0">
+         <artifact name="spotless-lib-extra-2.45.0.jar">
+            <sha256 value="602cbbcd3828ee9cfb2e30a7f9b30335c6927130771414d4cdd294d21fe5cb67" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.diffplug.spotless" name="spotless-plugin-gradle" version="6.25.0">
+         <artifact name="spotless-plugin-gradle-6.25.0.jar">
+            <sha256 value="f5eb908a4c5da46299e7543faada0402d2c4b77d58c7b432d4b6e59349b280a3" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.fasterxml.jackson.core" name="jackson-annotations" version="2.14.1">
+         <artifact name="jackson-annotations-2.14.1.jar">
+            <sha256 value="d255b4b863ff8ec714a8f96fa55c34621d43dbb82b82d3f57476496a4c09e1e7" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.fasterxml.jackson.core" name="jackson-core" version="2.14.1">
+         <artifact name="jackson-core-2.14.1.jar">
+            <sha256 value="0114187e296b34c931c1bf9e5a84152b62bfab7d182f5623f3982dc2da35e526" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.fasterxml.jackson.core" name="jackson-databind" version="2.14.1">
+         <artifact name="jackson-databind-2.14.1.jar">
+            <sha256 value="423a0c806de4b3fa5eb4a28698305e3a3777c731e1bcfa1b2f3a3760c7b6e773" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.fasterxml.woodstox" name="woodstox-core" version="6.5.1">
+         <artifact name="woodstox-core-6.5.1.jar">
+            <sha256 value="c928d60665c6415fb1c39775cf95cfc44f7f4580cf5ab01b1c380ebffd76887f" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.github.kittinunf.fuel" name="fuel" version="2.3.1">
+         <artifact name="fuel-2.3.1.jar">
+            <sha256 value="9e38b4b2b4f6bae5491c0975c1c4784ba9b7edc4a54f37acbca30db2c6516a35" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.github.kittinunf.fuel" name="fuel-gson" version="2.3.1">
+         <artifact name="fuel-gson-2.3.1.jar">
+            <sha256 value="159c7f5c0749ecf730b963691949dd0900336d88897175338d2477f53fdc482c" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.github.kittinunf.result" name="result" version="3.1.0">
+         <artifact name="result-3.1.0.jar">
+            <sha256 value="e02e7e0a9395174bb57bbd4043fb1fa6c4a69aa4da5ce4c65331651d22e89313" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.github.spotbugs" name="spotbugs-annotations" version="4.8.1">
+         <artifact name="spotbugs-annotations-4.8.1.jar">
+            <sha256 value="06eba41a81aaccb011c3f75afa019e509cda7f1eb7a4e057bb860c60845f915e" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.google.code.findbugs" name="jsr305" version="3.0.2">
+         <artifact name="jsr305-3.0.2.jar">
+            <sha256 value="766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.google.code.gson" name="gson" version="2.10.1">
+         <artifact name="gson-2.10.1.jar">
+            <sha256 value="4241c14a7727c34feea6507ec801318a3d4a90f070e4525681079fb94ee4c593" origin="Generated by Gradle"/>
+         </artifact>
+      </component>
+      <component group="com.google.code.gson" name="gson" version="2.11.0">
+         <artifact name="gson-2.11.0.jar">
+            <sha256 value="57928d6e5a6edeb2abd3770a8f95ba44dce45f3b23b7a9dc2b309c581552a78b" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.google.code.gson" name="gson" version="2.8.6">
+         <artifact name="gson-2.8.6.jar">
+            <sha256 value="c8fb4839054d280b3033f800d1f5a97de2f028eb8ba2eb458ad287e536f3f25f" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.google.errorprone" name="error_prone_annotations" version="2.27.0">
+         <artifact name="error_prone_annotations-2.27.0.jar">
+            <sha256 value="24c923372c58e35d0b9f16a028929bb9aedc77521867c274f2bd0735df5ba1f5" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.googlecode.concurrent-trees" name="concurrent-trees" version="2.6.1">
+         <artifact name="concurrent-trees-2.6.1.jar">
+            <sha256 value="04e3724984e2a5cbf55606cfa372a5bd3d3c5d2a21533a7004e3cde539761fa5" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.googlecode.javaewah" name="JavaEWAH" version="1.2.3">
+         <artifact name="JavaEWAH-1.2.3.jar">
+            <sha256 value="d65226949713c4c61a784f41c51167e7b0316f93764398ebba9e4336b3d954c2" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.gradleup.shadow" name="shadow-gradle-plugin" version="8.3.1">
+         <artifact name="shadow-gradle-plugin-8.3.1.jar">
+            <sha256 value="49d0b14065a344fe8c694a1186c8d706d98e2853c76a5b53ea4a93ad1bb01b3d" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.sonarsource.license" name="license-api" version="3.4">
+         <artifact name="license-api-3.4.jar">
+            <sha256 value="4196fb75427a928f0c7bffe03bfccf9ba9a12ab3a4be2cf58ea6a34bc1948752" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.sonarsource.rule-api" name="rule-api" version="2.8.0.4034">
+         <artifact name="rule-api-2.8.0.4034.jar">
+            <sha256 value="f86edd18a9821021cfdf0b8f95d4ffe98541198a0dff57e584fcfbf39ae6052e" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.squareup.okhttp3" name="okhttp" version="4.12.0">
+         <artifact name="okhttp-4.12.0.jar">
+            <sha256 value="b1050081b14bb7a3a7e55a4d3ef01b5dcfabc453b4573a4fc019767191d5f4e0" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="com.squareup.okio" name="okio-jvm" version="3.6.0">
+         <artifact name="okio-jvm-3.6.0.jar">
+            <sha256 value="67543f0736fc422ae927ed0e504b98bc5e269fda0d3500579337cb713da28412" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="commons-codec" name="commons-codec" version="1.15">
+         <artifact name="commons-codec-1.15.jar">
+            <sha256 value="b3e9f6d63a790109bf0d056611fbed1cf69055826defeb9894a71369d246ed63" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="commons-codec" name="commons-codec" version="1.16.0">
+         <artifact name="commons-codec-1.16.0.jar">
+            <sha256 value="56595fb20b0b85bc91d0d503dad50bb7f1b9afc0eed5dffa6cbb25929000484d" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="commons-codec" name="commons-codec" version="1.17.0">
+         <artifact name="commons-codec-1.17.0.jar">
+            <sha256 value="f700de80ac270d0344fdea7468201d8b9c805e5c648331c3619f2ee067ccfc59" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="commons-io" name="commons-io" version="2.11.0">
+         <artifact name="commons-io-2.11.0.jar">
+            <sha256 value="961b2f6d87dbacc5d54abf45ab7a6e2495f89b75598962d8c723cea9bc210908" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="commons-io" name="commons-io" version="2.16.1">
+         <artifact name="commons-io-2.16.1.jar">
+            <sha256 value="f41f7baacd716896447ace9758621f62c1c6b0a91d89acee488da26fc477c84f" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="commons-lang" name="commons-lang" version="2.6">
+         <artifact name="commons-lang-2.6.jar">
+            <sha256 value="50f11b09f877c294d56f24463f47d28f929cf5044f648661c0f0cfbae9a2f49c" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="commons-logging" name="commons-logging" version="1.2">
+         <artifact name="commons-logging-1.2.jar">
+            <sha256 value="daddea1ea0be0f56978ab3006b8ac92834afeefbd9b7e4e6316fca57df0fa636" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="dev.equo.ide" name="solstice" version="1.7.4">
+         <artifact name="solstice-1.7.4.jar">
+            <sha256 value="1288c1010299cb8434218e370f2291f2d6ea49b3ccb34b5082080f7c270a254c" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="dev.equo.ide" name="solstice" version="1.7.5">
+         <artifact name="solstice-1.7.5.jar">
+            <sha256 value="06e14bc43acc331dab6b5ea201fc67364ed123f982c85fa5131f0817ed65ae4f" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="junit" name="junit" version="4.13.2">
+         <artifact name="junit-4.13.2.jar">
+            <sha256 value="8e495b634469d64fb8acfa3495a065cbacc8a0fff55ce1e31007be4c16dc57d3" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="net.bytebuddy" name="byte-buddy" version="1.14.16">
+         <artifact name="byte-buddy-1.14.16.jar">
+            <sha256 value="5add6c7b294b2b2ac60c9a4b54f924cd65e4f10ccfed75d2a99d621d6c5f0a8d" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.apache.ant" name="ant" version="1.10.14">
+         <artifact name="ant-1.10.14.jar">
+            <sha256 value="4cbbd9243de4c1042d61d9a15db4c43c90ff93b16d78b39481da1c956c8e9671" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.apache.ant" name="ant-launcher" version="1.10.14">
+         <artifact name="ant-launcher-1.10.14.jar">
+            <sha256 value="f0909725a7a24e393888f3fbb558347abf506ce2f7ebc581ff26331b94d951a5" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.apache.commons" name="commons-compress" version="1.26.2">
+         <artifact name="commons-compress-1.26.2.jar">
+            <sha256 value="9168a03141d8fc7eda21a2360d83cc0412bcbb1d6204d992bd48c2573cb3c6b8" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.apache.commons" name="commons-csv" version="1.10.0">
+         <artifact name="commons-csv-1.10.0.jar">
+            <sha256 value="2d06e6a07a636baf777ad8e659256f2119109dde23551c9b80c5422d424b808c" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.apache.commons" name="commons-lang3" version="3.13.0">
+         <artifact name="commons-lang3-3.13.0.jar">
+            <sha256 value="82f528cf718c7a3c2f30fc5bc784e3c6a0a10b17605dadb9e16c82ede11e6064" origin="Generated by Gradle"/>
+         </artifact>
+      </component>
+      <component group="org.apache.commons" name="commons-lang3" version="3.14.0">
+         <artifact name="commons-lang3-3.14.0.jar">
+            <sha256 value="7b96bf3ee68949abb5bc465559ac270e0551596fa34523fddf890ec418dde13c" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.apache.commons" name="commons-text" version="1.11.0">
+         <artifact name="commons-text-1.11.0.jar">
+            <sha256 value="2acf30a070b19163d5a480eae411a281341e870020e3534c6d5d4c8472739e30" origin="Generated by Gradle"/>
+         </artifact>
+      </component>
+      <component group="org.apache.felix" name="org.apache.felix.scr" version="2.2.10">
+         <artifact name="org.apache.felix.scr-2.2.10.jar">
+            <sha256 value="dd9d920101890ecd0565a8e48bf3f80bbe3d398cdf0f1970a19eec4f54c8d4e1" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.apache.httpcomponents" name="httpclient" version="4.5.14">
+         <artifact name="httpclient-4.5.14.jar">
+            <sha256 value="c8bc7e1c51a6d4ce72f40d2ebbabf1c4b68bfe76e732104b04381b493478e9d6" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.apache.httpcomponents" name="httpcore" version="4.4.16">
+         <artifact name="httpcore-4.4.16.jar">
+            <sha256 value="6c9b3dd142a09dc468e23ad39aad6f75a0f2b85125104469f026e52a474e464f" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.apache.ivy" name="ivy" version="2.5.2">
+         <artifact name="ivy-2.5.2.jar">
+            <sha256 value="98428d545ea63cd9a0aaf255caf42cb8cb64fe430dbb5e709aed536d4daeed04" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.apache.logging.log4j" name="log4j-api" version="2.23.1">
+         <artifact name="log4j-api-2.23.1.jar">
+            <sha256 value="92ec1fd36ab3bc09de6198d2d7c0914685c0f7127ea931acc32fd2ecdd82ea89" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.apache.logging.log4j" name="log4j-core" version="2.23.1">
+         <artifact name="log4j-core-2.23.1.jar">
+            <sha256 value="7079368005fc34f56248f57f8a8a53361c3a53e9007d556dbc66fc669df081b5" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.apache.maven" name="maven-api-meta" version="4.0.0-alpha-9">
+         <artifact name="maven-api-meta-4.0.0-alpha-9.jar">
+            <sha256 value="32c4f5cadbab680c34952f9cb570457a1383ccec4c9a57b0392607d7191c6949" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.apache.maven" name="maven-api-xml" version="4.0.0-alpha-9">
+         <artifact name="maven-api-xml-4.0.0-alpha-9.jar">
+            <sha256 value="29b2628d0f028119715916849c19eed45b32cdc67eb13551798c73afa4aa23d6" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.apache.maven" name="maven-xml-impl" version="4.0.0-alpha-9">
+         <artifact name="maven-xml-impl-4.0.0-alpha-9.jar">
+            <sha256 value="26e702b881d57ae4ee88d02c00940ba64063705ee69205ae8958bf839a8b06b1" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.apiguardian" name="apiguardian-api" version="1.1.2">
+         <artifact name="apiguardian-api-1.1.2.jar">
+            <sha256 value="b509448ac506d607319f182537f0b35d71007582ec741832a1f111e5b5b70b38" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.assertj" name="assertj-core" version="3.26.0">
+         <artifact name="assertj-core-3.26.0.jar">
+            <sha256 value="b0f1b425899001fb6cc856f35318d133b3c4902d6ecdecb0834791268567094f" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.codehaus.groovy" name="groovy-backports-compat23" version="3.0.8">
+         <artifact name="groovy-backports-compat23-3.0.8.jar">
+            <sha256 value="4c1e79e14d426be6a0669604650380f8451e2ba9d078aa5fad5e1a260cb45e02" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.codehaus.plexus" name="plexus-utils" version="4.0.1">
+         <artifact name="plexus-utils-4.0.1.jar">
+            <sha256 value="96b9cc44439191d2d0635974e2d44e768736b4fb2abcb65f94cd95e41912fa8b" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.codehaus.plexus" name="plexus-xml" version="4.0.4">
+         <artifact name="plexus-xml-4.0.4.jar">
+            <sha256 value="069e78b537108dc6124a67073fc998264791f6b6499e955a38e72bb3e4fe1adf" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.codehaus.woodstox" name="stax2-api" version="4.2.1">
+         <artifact name="stax2-api-4.2.1.jar">
+            <sha256 value="678567e48b51a42c65c699f266539ad3d676d4b1a5b0ad7d89ece8b9d5772579" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.eclipse.jdt" name="ecj" version="3.38.0">
+         <artifact name="ecj-3.38.0.jar">
+            <sha256 value="97c566b120009c203a2fc8b291f4a9adbc171cf1ccb70f06f6b4e1828c00ce8e" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.eclipse.jdt" name="org.eclipse.jdt.core" version="3.38.0">
+         <artifact name="org.eclipse.jdt.core-3.38.0.jar">
+            <sha256 value="f0387e80ed4327d39f1f63da8773ee460af4edd78f7c2efecb4ba9bc0628bf60" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.eclipse.jgit" name="org.eclipse.jgit" version="6.7.0.202309050840-r">
+         <artifact name="org.eclipse.jgit-6.7.0.202309050840-r.jar">
+            <sha256 value="b564477d092241aaab50c84ac5dd1ac375c0182044d7e5659d3a60a90e2e801a" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.eclipse.platform" name="org.eclipse.core.commands" version="3.12.100">
+         <artifact name="org.eclipse.core.commands-3.12.100.jar">
+            <sha256 value="443adcdec30c0563e4d7bafe6f7eeca704749e4b5a8620d18626fb1d640b41f7" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.eclipse.platform" name="org.eclipse.core.contenttype" version="3.9.400">
+         <artifact name="org.eclipse.core.contenttype-3.9.400.jar">
+            <sha256 value="7622d903f85e8c11afe6ae662ffa1a2c33a5f694c6510758299f070ec520d4ca" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.eclipse.platform" name="org.eclipse.core.expressions" version="3.9.400">
+         <artifact name="org.eclipse.core.expressions-3.9.400.jar">
+            <sha256 value="2d8ef98092c1260b6b7743c762a4b1cc4b1679f8fbbb94e1d254d91ca232bd49" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.eclipse.platform" name="org.eclipse.core.filesystem" version="1.10.400">
+         <artifact name="org.eclipse.core.filesystem-1.10.400.jar">
+            <sha256 value="7cfc4f8aee8c1b399dcbe105e10e096a9e2f21dc56b28a3c7aa42cf0a5023682" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.eclipse.platform" name="org.eclipse.core.jobs" version="3.15.300">
+         <artifact name="org.eclipse.core.jobs-3.15.300.jar">
+            <sha256 value="ad6db9d0e7d8579d01b750fdced6d6e1d410919047d4bfd3b7d6a65627e5063a" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.eclipse.platform" name="org.eclipse.core.resources" version="3.20.200">
+         <artifact name="org.eclipse.core.resources-3.20.200.jar">
+            <sha256 value="8b51dd0c72e54ecfd4b56a160769ca00a0d944ace10d47ef372fa4e103698b13" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.eclipse.platform" name="org.eclipse.core.runtime" version="3.31.100">
+         <artifact name="org.eclipse.core.runtime-3.31.100.jar">
+            <sha256 value="aa484a9f9ecb6a2575d19d1a73bd943dbc9b2292751f4874109b7ac67fd904a8" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.eclipse.platform" name="org.eclipse.equinox.app" version="1.7.100">
+         <artifact name="org.eclipse.equinox.app-1.7.100.jar">
+            <sha256 value="7ebd054bc03da4d61abc166d22df41cfa0e49963a5b0c4b32dbe0b769b6c216d" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.eclipse.platform" name="org.eclipse.equinox.common" version="3.19.100">
+         <artifact name="org.eclipse.equinox.common-3.19.100.jar">
+            <sha256 value="77da20b3d040b9a00509add8583c659243a62e9f9633bc3f82b55e96b0a09427" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.eclipse.platform" name="org.eclipse.equinox.event" version="1.7.100">
+         <artifact name="org.eclipse.equinox.event-1.7.100.jar">
+            <sha256 value="9f7dbc1ced29e627cb228ec205be7f4e496330eee450b31cb94c7973e4459561" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.eclipse.platform" name="org.eclipse.equinox.preferences" version="3.11.100">
+         <artifact name="org.eclipse.equinox.preferences-3.11.100.jar">
+            <sha256 value="2dece57392142293cd35b58132b7f6bb0ac599a35f2ce734fd2551440ec27b47" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.eclipse.platform" name="org.eclipse.equinox.registry" version="3.12.100">
+         <artifact name="org.eclipse.equinox.registry-3.12.100.jar">
+            <sha256 value="23ded56b950ae846e006870f836c29b8d545f3a7bf9ced28baf41b5a2e5e8dbb" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.eclipse.platform" name="org.eclipse.equinox.supplement" version="1.10.900">
+         <artifact name="org.eclipse.equinox.supplement-1.10.900.jar">
+            <sha256 value="6edca163c9e251e8500765206b5728f91a929f664b692d6a5affb1ef644614ab" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.eclipse.platform" name="org.eclipse.osgi" version="3.18.300">
+         <artifact name="org.eclipse.osgi-3.18.300.jar">
+            <sha256 value="bab943e58edd17309238672dba7a45aec9e2dacbdddb818a8cf17723ea13fa22" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.eclipse.platform" name="org.eclipse.osgi" version="3.20.0">
+         <artifact name="org.eclipse.osgi-3.20.0.jar">
+            <sha256 value="11e61736689f0c1af46c9a852420058e10c6072f936c8308b6eca50e46dd38ef" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.eclipse.platform" name="org.eclipse.text" version="3.14.100">
+         <artifact name="org.eclipse.text-3.14.100.jar">
+            <sha256 value="7c9791768a715b1fef29dec8ba6a15a968bcc1cf7a766d439273fe52362eec65" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.gradle.kotlin" name="gradle-kotlin-dsl-plugins" version="4.4.0">
+         <artifact name="gradle-kotlin-dsl-plugins-4.4.0.jar">
+            <sha256 value="918fea73b249301cbf0c030d70acc023759fce377ad30b6c203d53870a61689c" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.gradle.toolchains" name="foojay-resolver" version="0.8.0">
+         <artifact name="foojay-resolver-0.8.0.jar">
+            <sha256 value="f90e69351638e90b9ec9848e759d218635907c092541191150037b0b22e5140c" origin="Generated by Gradle"/>
+         </artifact>
+      </component>
+      <component group="org.hamcrest" name="hamcrest-core" version="1.3">
+         <artifact name="hamcrest-core-1.3.jar">
+            <sha256 value="66fdef91e9739348df7a096aa384a5685f4e875584cce89386a7a47251c4d8e9" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jacoco" name="org.jacoco.agent" version="0.8.11">
+         <artifact name="org.jacoco.agent-0.8.11.jar">
+            <sha256 value="d3ed85dea78a9ed55846a7738e3a0ca15c702c661ee4bc8cbfe02a8b9f4a99c0" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jacoco" name="org.jacoco.ant" version="0.8.11">
+         <artifact name="org.jacoco.ant-0.8.11.jar">
+            <sha256 value="81d7eb8890d9be30a939612c295603541063529cdd03a53265aba74474b70b7c" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jacoco" name="org.jacoco.core" version="0.8.11">
+         <artifact name="org.jacoco.core-0.8.11.jar">
+            <sha256 value="fcd188c688473fc8dcc0c6caaf355e7b389502243527c33b9597a3ec28791f47" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jacoco" name="org.jacoco.report" version="0.8.11">
+         <artifact name="org.jacoco.report-0.8.11.jar">
+            <sha256 value="8393295ae24680ed10cad8333907040f928b871332491581ca5bc784e2cb4fbe" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jdom" name="jdom2" version="2.0.6.1">
+         <artifact name="jdom2-2.0.6.1.jar">
+            <sha256 value="0b20f45e3a0fd8f0d12cdc5316b06776e902b1365db00118876f9175c60f302c" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains" name="annotations" version="13.0">
+         <artifact name="annotations-13.0.jar">
+            <sha256 value="ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.intellij.deps" name="trove4j" version="1.0.20200330">
+         <artifact name="trove4j-1.0.20200330.jar">
+            <sha256 value="c5fd725bffab51846bf3c77db1383c60aaaebfe1b7fe2f00d23fe1b7df0a439d" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-android-extensions" version="1.9.23">
+         <artifact name="kotlin-android-extensions-1.9.23.jar">
+            <sha256 value="61fd7648f931ff4e9bdbff49bf0987705763fbba9c7bb00b264811a36d111ac1" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-assignment" version="1.9.23">
+         <artifact name="kotlin-assignment-1.9.23-gradle82.jar">
+            <sha256 value="9ae832be35049c828db2b777e779daa5c4ee807e80df10781ce3e340af819cba" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-assignment-compiler-plugin-embeddable" version="1.9.23">
+         <artifact name="kotlin-assignment-compiler-plugin-embeddable-1.9.23.jar">
+            <sha256 value="f882142256666122e9c5236eb4d9067528910e882a811fbe42d92fe72070a6a7" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-build-common" version="1.9.23">
+         <artifact name="kotlin-build-common-1.9.23.jar">
+            <sha256 value="22825a1efe1549137d1813ed79dc9ccaf54b4a8a2700a4ac7f708dc660248baf" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-build-tools-api" version="1.9.23">
+         <artifact name="kotlin-build-tools-api-1.9.23.jar">
+            <sha256 value="82f847e25457b464837efef1da8502ec92532de7406e79205166ce0ecf4fc521" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-build-tools-impl" version="1.9.23">
+         <artifact name="kotlin-build-tools-impl-1.9.23.jar">
+            <sha256 value="eac2f04665871955a7d0ae4571969df2b08e7d337b2f12210066fd3ee01f5981" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-compiler-embeddable" version="1.9.23">
+         <artifact name="kotlin-compiler-embeddable-1.9.23.jar">
+            <sha256 value="cc94064974bf9ebf59945e31217cf2d16a0cebaaf2487eb0748fc1cbd1787943" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-compiler-runner" version="1.9.23">
+         <artifact name="kotlin-compiler-runner-1.9.23.jar">
+            <sha256 value="c8595a3e1711c7453c7f960aaf12a170db4bda3d6fcba49ffc8e32cbfd000ca1" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-daemon-client" version="1.9.23">
+         <artifact name="kotlin-daemon-client-1.9.23.jar">
+            <sha256 value="e63154254919fd706fe9937c48db937ea9068a631f86de655a514bc1620f988d" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-daemon-embeddable" version="1.9.23">
+         <artifact name="kotlin-daemon-embeddable-1.9.23.jar">
+            <sha256 value="6f3b661b98267ad24e2f8fb7ad5d06be7d2ed61a5d05c267f4e4caa78df783d9" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-gradle-plugin" version="1.9.23">
+         <artifact name="kotlin-gradle-plugin-1.9.23-gradle82.jar">
+            <sha256 value="bcc74a07c69dd11c94b260b1ee8a618969629ccaeac2e6ea0a779da3c3f7ec3f" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-gradle-plugin-annotations" version="1.9.23">
+         <artifact name="kotlin-gradle-plugin-annotations-1.9.23.jar">
+            <sha256 value="1da8ad060a5bc382b04f157271d3cdad6830714a2f4df4af7c40088d4b922164" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-gradle-plugin-api" version="1.9.23">
+         <artifact name="kotlin-gradle-plugin-api-1.9.23-gradle82.jar">
+            <sha256 value="593cc0842d5fc097b95e0a602bff8c7a489f73743b873cb0b8eec92fce8a415b" origin="Verified"/>
+         </artifact>
+         <artifact name="kotlin-gradle-plugin-api-1.9.23.jar">
+            <sha256 value="593cc0842d5fc097b95e0a602bff8c7a489f73743b873cb0b8eec92fce8a415b" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-gradle-plugin-idea" version="1.9.23">
+         <artifact name="kotlin-gradle-plugin-idea-1.9.23.jar">
+            <sha256 value="8d1af87632d95148f122a9fa0ae2903c19ee6fab7d01e017f76e0d2c9a022c20" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-gradle-plugin-idea-proto" version="1.9.23">
+         <artifact name="kotlin-gradle-plugin-idea-proto-1.9.23.jar">
+            <sha256 value="8bbfdad14d3c3c50b32bf6bfe0f1c7027be54285c46daf79827cf93b5cb43d7f" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-gradle-plugin-model" version="1.9.23">
+         <artifact name="kotlin-gradle-plugin-model-1.9.23.jar">
+            <sha256 value="3e58dfae5e43fc88365f52df3a344208c0100c975a72a94a2c4a09f661d32317" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-klib-commonizer-api" version="1.9.23">
+         <artifact name="kotlin-klib-commonizer-api-1.9.23.jar">
+            <sha256 value="5df1164db1c345d86d0a1aa414909e367afb9782fe3fbcaf0e2af7a8bf62b839" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-klib-commonizer-embeddable" version="1.9.23">
+         <artifact name="kotlin-klib-commonizer-embeddable-1.9.23.jar">
+            <sha256 value="b80a38b4bb81fb03d0f307473d032d73b2778fa76b0346387e5a10dd833d728e" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-native-utils" version="1.9.23">
+         <artifact name="kotlin-native-utils-1.9.23.jar">
+            <sha256 value="5fd01485bd73e617be556bff4992ff012aaeb9f0d9c0084f37cb5d88a3bcad84" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-project-model" version="1.9.23">
+         <artifact name="kotlin-project-model-1.9.23.jar">
+            <sha256 value="8fcb3ce512abb452d7d431dbb2c312d5c4505d1762493b51b106afc147d99367" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-reflect" version="1.6.10">
+         <artifact name="kotlin-reflect-1.6.10.jar">
+            <sha256 value="3277ac102ae17aad10a55abec75ff5696c8d109790396434b496e75087854203" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-reflect" version="1.9.23">
+         <artifact name="kotlin-reflect-1.9.23.jar">
+            <sha256 value="747c2927a623b6ebb734b465d6a26862e920ddd1828ef43716887c0849a3131f" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-sam-with-receiver" version="1.9.23">
+         <artifact name="kotlin-sam-with-receiver-1.9.23-gradle82.jar">
+            <sha256 value="2f9c86fd45f94f84eb16bacedded2d1c2a71a66fa8b7fead6f4fd48fbedb174f" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-sam-with-receiver-compiler-plugin-embeddable" version="1.9.23">
+         <artifact name="kotlin-sam-with-receiver-compiler-plugin-embeddable-1.9.23.jar">
+            <sha256 value="33d3b3bf3db4fa6dba7034cda5de2c93474f396c032d94f3ad4306811fbfedac" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-script-runtime" version="1.9.23">
+         <artifact name="kotlin-script-runtime-1.9.23.jar">
+            <sha256 value="75137e414a1a5b4b4d090f812d0e35eb30b4f0c923a53d69585456bb24fc1df8" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-scripting-common" version="1.9.23">
+         <artifact name="kotlin-scripting-common-1.9.23.jar">
+            <sha256 value="8a2e567f3dbf373e61c01acd7884631ec8538465ab8ee978ac63296f8cc9af46" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-scripting-compiler-embeddable" version="1.9.23">
+         <artifact name="kotlin-scripting-compiler-embeddable-1.9.23.jar">
+            <sha256 value="7b8039ff0b779d556ced00923035abd1334f0e5f2a88796182d02ba45f926d20" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-scripting-compiler-impl-embeddable" version="1.9.23">
+         <artifact name="kotlin-scripting-compiler-impl-embeddable-1.9.23.jar">
+            <sha256 value="90e53dd12f62dcd82343c12c0cb314adcff0cbc3988edb118d1e6689960e9d63" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-scripting-jvm" version="1.9.23">
+         <artifact name="kotlin-scripting-jvm-1.9.23.jar">
+            <sha256 value="d3fca7ec951ff7826f97a75989f8dcaff60cf9e1e76bbdc220edf778376a6e64" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-stdlib" version="1.9.10">
+         <artifact name="kotlin-stdlib-1.9.10.jar">
+            <sha256 value="55e989c512b80907799f854309f3bc7782c5b3d13932442d0379d5c472711504" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-stdlib" version="1.9.23">
+         <artifact name="kotlin-stdlib-1.9.23-all.jar">
+            <sha256 value="cec38bc3302e72a8aaf9cde436b5a9071ee0331e2ad05e84d8bb897334d7e9d4" origin="Verified"/>
+         </artifact>
+         <artifact name="kotlin-stdlib-1.9.23.jar">
+            <sha256 value="8910cc238807d86ef550cb1f0b10dd5ed40b35a4ec1a52525f760aede84ead37" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-stdlib-common" version="1.9.10">
+         <artifact name="kotlin-stdlib-common-1.9.10.jar">
+            <sha256 value="cde3341ba18a2ba262b0b7cf6c55b20c90e8d434e42c9a13e6a3f770db965a88" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-stdlib-jdk7" version="1.9.10">
+         <artifact name="kotlin-stdlib-jdk7-1.9.10.jar">
+            <sha256 value="ac6361bf9ad1ed382c2103d9712c47cdec166232b4903ed596e8876b0681c9b7" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-stdlib-jdk8" version="1.9.10">
+         <artifact name="kotlin-stdlib-jdk8-1.9.10.jar">
+            <sha256 value="a4c74d94d64ce1abe53760fe0389dd941f6fc558d0dab35e47c085a11ec80f28" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-tooling-core" version="1.9.23">
+         <artifact name="kotlin-tooling-core-1.9.23.jar">
+            <sha256 value="8938eb97e36320daa3e6fb2a60fd2a05b232ff4a557173c5019f045b8832d9f4" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-util-io" version="1.9.23">
+         <artifact name="kotlin-util-io-1.9.23.jar">
+            <sha256 value="7a6dce40e78acbe66fc7d678eb741c877845a3cfd1c76c4d2bbf8ec845d2d929" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlin" name="kotlin-util-klib" version="1.9.23">
+         <artifact name="kotlin-util-klib-1.9.23.jar">
+            <sha256 value="e4018b6b8fbc91e4d0a37ab81c050a81396868075108cd85082b925c79d3bc6d" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains.kotlinx" name="kotlinx-coroutines-core-jvm" version="1.5.0">
+         <artifact name="kotlinx-coroutines-core-jvm-1.5.0.jar">
+            <sha256 value="78d6cc7135f84d692ff3752fcfd1fa1bbe0940d7df70652e4f1eaeec0c78afbb" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jfrog.buildinfo" name="build-info-api" version="2.41.22">
+         <artifact name="build-info-api-2.41.22.jar">
+            <sha256 value="da10186c3ba43561092cbec66ce9aef81ff47de2d9d865918ff8e3cd2914c90a" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jfrog.buildinfo" name="build-info-client" version="2.41.22">
+         <artifact name="build-info-client-2.41.22.jar">
+            <sha256 value="ce75866049e5a313908b9732394996c2596fa636cbb8dd4f4c5918102dc519b5" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jfrog.buildinfo" name="build-info-extractor" version="2.41.22">
+         <artifact name="build-info-extractor-2.41.22.jar">
+            <sha256 value="5091430cb08b20c4e1792bb28bf1a37a3cdf588c39891fdba3aac5d1a3f4042b" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jfrog.buildinfo" name="build-info-extractor-gradle" version="5.2.5">
+         <artifact name="build-info-extractor-gradle-5.2.5.jar">
+            <sha256 value="a06c1956fec972926f11b1f2ead50bf42366f3e36a72e86efedec887e54049d1" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.jfrog.filespecs" name="file-specs-java" version="1.1.2">
+         <artifact name="file-specs-java-1.1.2.jar">
+            <sha256 value="bb0dbc2c2b9fc993cfa86711398f4caf1480a9271c6d07a3a97c11b1a8e6141e" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.junit.jupiter" name="junit-jupiter" version="5.10.2">
+         <artifact name="junit-jupiter-5.10.2.jar">
+            <sha256 value="263e43447f4b40f126ad6b1dcbd7df379448413bdedb8e0d240c5bcbba7c7a4f" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.junit.jupiter" name="junit-jupiter-api" version="5.10.2">
+         <artifact name="junit-jupiter-api-5.10.2.jar">
+            <sha256 value="afff77c186cd317275803872fa5133aa801fd6ac40bd91c78a6cf8009b4b17cc" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.junit.jupiter" name="junit-jupiter-engine" version="5.10.2">
+         <artifact name="junit-jupiter-engine-5.10.2.jar">
+            <sha256 value="b6df35da750a546ae932376f11b3c0df841f0c90c7cb2944cd39adb432886e4b" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.junit.jupiter" name="junit-jupiter-params" version="5.10.2">
+         <artifact name="junit-jupiter-params-5.10.2.jar">
+            <sha256 value="edb1e43ff0b8067626ffb55e5e9eeca1d9ab2478141a7c7f253d115b29cc7cf2" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.junit.platform" name="junit-platform-commons" version="1.10.2">
+         <artifact name="junit-platform-commons-1.10.2.jar">
+            <sha256 value="b56a5ec000a479df4973b18bba24c98fe0db8faa14c8907d3ef451d8c71fd8ae" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.junit.platform" name="junit-platform-engine" version="1.10.2">
+         <artifact name="junit-platform-engine-1.10.2.jar">
+            <sha256 value="905cba9b4998ccc29d1239085a7fb1fe0e28024d7526152356d810edec0a49a3" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.junit.platform" name="junit-platform-launcher" version="1.10.2">
+         <artifact name="junit-platform-launcher-1.10.2.jar">
+            <sha256 value="aed4f42fb90ada9b347c231f13656fc09121ba20dab6dc646a6bd9d4da31e4aa" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.opentest4j" name="opentest4j" version="1.3.0">
+         <artifact name="opentest4j-1.3.0.jar">
+            <sha256 value="48e2df636cab6563ced64dcdff8abb2355627cb236ef0bf37598682ddf742f1b" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.osgi" name="org.osgi.service.cm" version="1.6.1">
+         <artifact name="org.osgi.service.cm-1.6.1.jar">
+            <sha256 value="529da7b6806af4d788acc0aef0079c9c920f6cb1d2679c8f392ca552fb2e1d35" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.osgi" name="org.osgi.service.component" version="1.5.1">
+         <artifact name="org.osgi.service.component-1.5.1.jar">
+            <sha256 value="0653852deab5c6f6e9c84e3aa8f72e72b9ce7dfaf7a6431f3d80f6f9d7a433ad" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.osgi" name="org.osgi.service.event" version="1.4.1">
+         <artifact name="org.osgi.service.event-1.4.1.jar">
+            <sha256 value="9f11c68980dbd931850f3f27fc7c35e1d710ecc728fe872bd6d786cd7e4b7b5e" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.osgi" name="org.osgi.service.metatype" version="1.4.1">
+         <artifact name="org.osgi.service.metatype-1.4.1.jar">
+            <sha256 value="83d9cc2b62500d2e438be91c157659c2d693a262cfd14eb9b916286ca627ed00" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.osgi" name="org.osgi.service.prefs" version="1.1.2">
+         <artifact name="org.osgi.service.prefs-1.1.2.jar">
+            <sha256 value="43c7c870710e363405d422da653cce0d798a4537f76e4930f79bceadd3a55345" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.osgi" name="org.osgi.util.function" version="1.2.0">
+         <artifact name="org.osgi.util.function-1.2.0.jar">
+            <sha256 value="208819c7c71690c15a6bb8b187474e7f9d0147946b680182a62b9f222ae014ec" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.osgi" name="org.osgi.util.promise" version="1.3.0">
+         <artifact name="org.osgi.util.promise-1.3.0.jar">
+            <sha256 value="7053c57e7d7d88fec6b90979a3af125e1d2bb847268a328a2f1ed65ad0a4c185" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.ow2.asm" name="asm" version="9.6">
+         <artifact name="asm-9.6.jar">
+            <sha256 value="3c6fac2424db3d4a853b669f4e3d1d9c3c552235e19a319673f887083c2303a1" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.ow2.asm" name="asm" version="9.7">
+         <artifact name="asm-9.7.jar">
+            <sha256 value="adf46d5e34940bdf148ecdd26a9ee8eea94496a72034ff7141066b3eea5c4e9d" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.ow2.asm" name="asm-commons" version="9.6">
+         <artifact name="asm-commons-9.6.jar">
+            <sha256 value="7aefd0d5c0901701c69f7513feda765fb6be33af2ce7aa17c5781fc87657c511" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.ow2.asm" name="asm-commons" version="9.7">
+         <artifact name="asm-commons-9.7.jar">
+            <sha256 value="389bc247958e049fc9a0408d398c92c6d370c18035120395d4cba1d9d9304b7a" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.ow2.asm" name="asm-tree" version="9.6">
+         <artifact name="asm-tree-9.6.jar">
+            <sha256 value="c43ecf17b539c777e15da7b5b86553b377e2d39a683de6285567d5283888e7ef" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.ow2.asm" name="asm-tree" version="9.7">
+         <artifact name="asm-tree-9.7.jar">
+            <sha256 value="62f4b3bc436045c1acb5c3ba2d8ec556ec3369093d7f5d06c747eb04b56d52b1" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.slf4j" name="slf4j-api" version="1.7.30">
+         <artifact name="slf4j-api-1.7.30.jar">
+            <sha256 value="cdba07964d1bb40a0761485c6b1e8c2f8fd9eb1d19c53928ac0d7f9510105c57" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.slf4j" name="slf4j-api" version="1.7.32">
+         <artifact name="slf4j-api-1.7.32.jar">
+            <sha256 value="3624f8474c1af46d75f98bc097d7864a323c81b3808aa43689a6e1c601c027be" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.slf4j" name="slf4j-api" version="1.7.36">
+         <artifact name="slf4j-api-1.7.36.jar">
+            <sha256 value="d3ef575e3e4979678dc01bf1dcce51021493b4d11fb7f1be8ad982877c16a1c0" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.sonarsource.api.plugin" name="sonar-plugin-api" version="10.1.0.809">
+         <artifact name="sonar-plugin-api-10.1.0.809.jar">
+            <sha256 value="cc86005f3940d18c55d93796cb337d4b8111fb0aae0df833da5173b92b82e771" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.sonarsource.api.plugin" name="sonar-plugin-api-test-fixtures" version="10.1.0.809">
+         <artifact name="sonar-plugin-api-test-fixtures-10.1.0.809.jar">
+            <sha256 value="20cef37be309996eb3e88ddac0486c5236acb2d4053f5b8578a5bcaae8c3ddf5" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.sonarsource.scanner.api" name="sonar-scanner-api" version="2.16.2.588">
+         <artifact name="sonar-scanner-api-2.16.2.588.jar">
+            <sha256 value="4df4526499760242c2d5d76ee8bc38326b4549c344e034e12bc392d2b8a618ac" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.sonarsource.scanner.gradle" name="sonarqube-gradle-plugin" version="5.1.0.4882">
+         <artifact name="sonarqube-gradle-plugin-5.1.0.4882.jar">
+            <sha256 value="0a0a1aa505a1b05c94768bd248a51e1bc61af251ec9819f352b41c2afd8cbcfa" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.sonarsource.sonarqube" name="sonar-plugin-api-impl" version="10.1.0.73491">
+         <artifact name="sonar-plugin-api-impl-10.1.0.73491.jar">
+            <sha256 value="3f507785f39707b393fc6928aede41a90537e4820500ff2c7cfdf4c821611e14" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.tukaani" name="xz" version="1.10">
+         <artifact name="xz-1.10.jar">
+            <sha256 value="95c63c1a55b22dd6453890a419cc1a640f790bbf7d8ae82db1e30aefefb08888" origin="Verified"/>
+         </artifact>
+      </component>
+      <component group="org.vafer" name="jdependency" version="2.10">
+         <artifact name="jdependency-2.10.jar">
+            <sha256 value="1dcd8355ab9ebced687715bf1252eb2aee5d0e74497a2014fd3387cfce8df85f" origin="Verified"/>
+         </artifact>
+      </component>
+   </components>
+</verification-metadata>
