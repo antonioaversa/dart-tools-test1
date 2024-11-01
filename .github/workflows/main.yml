@@ -11,9 +11,19 @@ on:
 
 name: Main Workflow
 jobs:
-  sonarqube-10_7_0-develor:
+  sonarqube-10_7_0-developer:
     runs-on: ubuntu-latest
     services:
+      #https-proxy:
+      #  image: nginx
+      #  volumes:
+      #    - $GITHUB_WORKSPACE/nginx.conf:/etc/nginx/nginx.conf:ro
+      #    - $GITHUB_WORKSPACE/client_certs/ca.crt:/etc/nginx/client_certs/ca.crt:ro
+      #    - $GITHUB_WORKSPACE/server_certs/server.crt:/etc/nginx/server.crt:ro
+      #    - $GITHUB_WORKSPACE/server_certs/server.key:/etc/nginx/server.key:ro
+      #  ports:
+      #    - 4443:4443
+
       sonarqube:
         image: sonarqube:10.7.0-developer
         ports:
@@ -33,10 +43,73 @@ jobs:
         # Disabling shallow clones is recommended for improving the relevancy of reporting
         fetch-depth: 0
 
+    - name: Start nginx
+      run: |
+        set -euxo pipefail
+        /usr/bin/docker version --format '{{.Server.APIVersion}}'
+        /usr/bin/docker version --format '{{.Client.APIVersion}}'
+        /usr/bin/docker ps --all --quiet --no-trunc --filter "label=6ce69c"
+        /usr/bin/docker network prune --force --filter "label=6ce69c"
+        /usr/bin/docker network create --label 6ce69c github_network_e300061dc7714a7c9f4edcdacaa0cfa5
+        /usr/bin/docker pull nginx
+        /usr/bin/docker create \
+          --name 9ef18338d5b444b6947f6702241f153d_nginx_7a5d7f \
+          --label 6ce69c \
+          --network github_network_e300061dc7714a7c9f4edcdacaa0cfa5 \
+          --network-alias https-proxy \
+          -p 4443:4443  \
+          -e GITHUB_ACTIONS=true \
+          -e CI=true \
+          -v "./nginx.conf":"/etc/nginx/nginx.conf":ro \
+          -v "./client_certs/ca.crt":"/etc/nginx/client_certs/ca.crt":ro \
+          -v "./server_certs/server.crt":"/etc/nginx/server.crt":ro \
+          -v "./server_certs/server.key":"/etc/nginx/server.key":ro nginx
+
     - name: Dart Scan
       uses: antonioaversa/sonarqube-scan-action@master
       env:
         SONAR_HOST_URL: http://localhost:9000
+      with:
+        args: -Dsonar.projectKey=dart-project -Dsonar.login=admin -Dsonar.password=admin --debug
+        projectBaseDir: ./dart-project
+    
+    - name: Dart Scan SSL
+      uses: antonioaversa/sonarqube-scan-action@master
+      env:
+        SONAR_HOST_URL: http://localhost:4443
+        SONAR_ROOT_CERT: |
+          -----BEGIN CERTIFICATE-----
+          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
+          -----END CERTIFICATE-----
       with:
         args: -Dsonar.projectKey=dart-project -Dsonar.login=admin -Dsonar.password=admin --debug
         projectBaseDir: ./dart-project
