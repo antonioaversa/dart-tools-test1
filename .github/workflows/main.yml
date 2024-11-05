@@ -13,6 +13,7 @@ name: Main Workflow
 jobs:
   sonarqube-10_7_0-developer:
     runs-on: ubuntu-latest
+    if: false
     services:
       #https-proxy:
       #  image: nginx
@@ -113,6 +114,41 @@ jobs:
       with:
         args: -Dsonar.projectKey=dart-project -Dsonar.login=admin -Dsonar.password=admin --debug
         projectBaseDir: ./dart-project
+
+  sonarqube-9_9_7-developer-win-js:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, ubuntu-24.04, ubuntu-22.04, ubuntu-20.04,	windows-latest, windows-2022, windows-2019, macos-latest, macos-15, macos-14, macos-13, macos-12]
+    runs-on: ${{ matrix.os }}
+    services:
+      sonarqube:
+        image: sonarqube:9.9.7-developer
+        ports:
+          - 9000:9000
+        volumes:
+          - sonarqube_data:/opt/sonarqube/data
+          - sonarqube_logs:/opt/sonarqube/logs
+          - sonarqube_extensions:/opt/sonarqube/extensions
+        options: >-
+          --health-cmd "grep -Fq \"SonarQube is operational\" /opt/sonarqube/logs/sonar.log"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        # Disabling shallow clones is recommended for improving the relevancy of reporting
+        fetch-depth: 0
+
+    - name: JS Scan
+      uses: antonioaversa/sonarqube-scan-action@master
+      env:
+        SONAR_HOST_URL: http://localhost:9000
+      with:
+        args: -Dsonar.projectKey=js-project -Dsonar.login=admin -Dsonar.password=admin --debug
+        projectBaseDir: ./js-project
+
+  ###################################
 
   sonarqube-9_9_7-developer:
     if: false
