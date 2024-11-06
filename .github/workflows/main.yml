@@ -13,7 +13,6 @@ name: Main Workflow
 jobs:
   sonarqube-10_7_0-developer:
     runs-on: ubuntu-latest
-    if: false
     services:
       #https-proxy:
       #  image: nginx
@@ -45,6 +44,7 @@ jobs:
         fetch-depth: 0
 
     - name: Start nginx
+      if: false
       run: |
         set -euxo pipefail
         /usr/bin/docker version --format '{{.Server.APIVersion}}'
@@ -75,6 +75,7 @@ jobs:
         projectBaseDir: ./dart-project
     
     - name: Dart Scan SSL
+      if: false
       uses: antonioaversa/sonarqube-scan-action@master
       env:
         SONAR_HOST_URL: http://localhost:4443
@@ -115,7 +116,7 @@ jobs:
         args: -Dsonar.projectKey=dart-project -Dsonar.login=admin -Dsonar.password=admin --debug
         projectBaseDir: ./dart-project
 
-  sonarqube-9_9_7-developer-win-js:
+  sonarqube-9_9_7-developer-js:
     strategy:
       matrix:
         os: [ubuntu-latest, ubuntu-24.04, ubuntu-22.04, ubuntu-20.04]
