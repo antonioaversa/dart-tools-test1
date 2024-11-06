@@ -1,7 +1,8 @@
 version: "3.8"
 services:
   sonarqube:
-    image: sonarqube:10.6.0-developer
+    image: sonarqube:10.7.0-developer
+    container_name: sonarqube
     ports:
       - 9000:9000
     volumes:
@@ -13,9 +14,9 @@ services:
       --health-interval 10s
       --health-timeout 5s
       --health-retries 10
-
   https-proxy:
     image: nginx
+    container_name: https-proxy
     ports:
       - 4443:4443
     volumes:
