@@ -46,6 +46,7 @@ jobs:
         fetch-depth: 0
 
     - name: Start nginx and SonarQube
+      if: false
       run: |
         set -euxo pipefail
         /usr/bin/docker version --format '{{.Server.APIVersion}}'
@@ -87,6 +88,7 @@ jobs:
           sonarqube:10.6.0-developer
     
     - name: Dart Scan SSL
+      if: false
       uses: antonioaversa/sonarqube-scan-action@master
       env:
         SONAR_HOST_URL: http://localhost:4443
@@ -128,7 +130,6 @@ jobs:
         projectBaseDir: ./dart-project
 
     - name: Dart Scan
-      if: false
       uses: antonioaversa/sonarqube-scan-action@master
       env:
         SONAR_HOST_URL: http://localhost:9000
@@ -161,6 +162,9 @@ jobs:
       with:
         # Disabling shallow clones is recommended for improving the relevancy of reporting
         fetch-depth: 0
+    - name: Sanity checks
+      run: echo "Sanity checks"
+      shell: bash
 
     - name: JS Scan
       uses: antonioaversa/sonarqube-scan-action@master
