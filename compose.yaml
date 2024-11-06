@@ -1,4 +1,5 @@
 version: "3.8"
+
 services:
   sonarqube:
     image: sonarqube:10.7.0-developer
@@ -14,6 +15,7 @@ services:
       --health-interval 10s
       --health-timeout 5s
       --health-retries 10
+
   https-proxy:
     image: nginx
     container_name: https-proxy
