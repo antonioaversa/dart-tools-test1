@@ -73,7 +73,7 @@ jobs:
       with:
         args: -Dsonar.projectKey=dart-project -Dsonar.login=admin -Dsonar.password=admin --debug
         projectBaseDir: ./dart-project
-        scannerVersion: 6.2.0.4584
+        scannerVersion: 6.1.0.4477
     
     - name: Dart Scan SSL
       if: false
