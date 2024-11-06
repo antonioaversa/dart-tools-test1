@@ -13,7 +13,7 @@ name: Main Workflow
 jobs:
   sonarqube-10_7_0-developer:
     runs-on: ubuntu-latest
-    services:
+    #services:
       #https-proxy:
       #  image: nginx
       #  volumes:
@@ -24,19 +24,19 @@ jobs:
       #  ports:
       #    - 4443:4443
 
-      sonarqube:
-        image: sonarqube:10.6.0-developer
-        ports:
-          - 9000:9000
-        volumes:
-          - sonarqube_data:/opt/sonarqube/data
-          - sonarqube_logs:/opt/sonarqube/logs
-          - sonarqube_extensions:/opt/sonarqube/extensions
-        options: >-
-          --health-cmd "grep -Fq \"SonarQube is operational\" /opt/sonarqube/logs/sonar.log"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 10
+      #sonarqube:
+      #  image: sonarqube:10.6.0-developer
+      #  ports:
+      #    - 9000:9000
+      #  volumes:
+      #    - sonarqube_data:/opt/sonarqube/data
+      #    - sonarqube_logs:/opt/sonarqube/logs
+      #    - sonarqube_extensions:/opt/sonarqube/extensions
+      #  options: >-
+      #    --health-cmd "grep -Fq \"SonarQube is operational\" /opt/sonarqube/logs/sonar.log"
+      #    --health-interval 10s
+      #    --health-timeout 5s
+      #    --health-retries 10
           
     steps:
     - uses: actions/checkout@v4
@@ -44,8 +44,7 @@ jobs:
         # Disabling shallow clones is recommended for improving the relevancy of reporting
         fetch-depth: 0
 
-    - name: Start nginx
-      if: false
+    - name: Start nginx and SonarQube
       run: |
         set -euxo pipefail
         /usr/bin/docker version --format '{{.Server.APIVersion}}'
@@ -65,19 +64,28 @@ jobs:
           -v "./nginx.conf":"/etc/nginx/nginx.conf":ro \
           -v "./client_certs/ca.crt":"/etc/nginx/client_certs/ca.crt":ro \
           -v "./server_certs/server.crt":"/etc/nginx/server.crt":ro \
-          -v "./server_certs/server.key":"/etc/nginx/server.key":ro nginx
+          -v "./server_certs/server.key":"/etc/nginx/server.key":ro \
+          nginx
 
-    - name: Dart Scan
-      uses: antonioaversa/sonarqube-scan-action@master
-      env:
-        SONAR_HOST_URL: http://localhost:9000
-      with:
-        args: -Dsonar.projectKey=dart-project -Dsonar.login=admin -Dsonar.password=admin --debug
-        projectBaseDir: ./dart-project
-        scannerVersion: 6.1.0.4477
+        /usr/bin/docker pull sonarqube:10.6.0-developer
+        /usr/bin/docker create \
+          --name 3ba0b5341a7f4135a51ee497fdde1d8d_sonarqube1060developer_c944bc \
+          --label ba7e62 \
+          --network github_network_e300061dc7714a7c9f4edcdacaa0cfa5 \
+          --network-alias sonarqube \
+          -p 9000:9000 \
+          --health-cmd "grep -Fq \"SonarQube is operational\" /opt/sonarqube/logs/sonar.log" \
+          --health-interval 10s \
+          --health-timeout 5s \
+          --health-retries 10 \
+          -e GITHUB_ACTIONS=true \
+          -e CI=true \
+          -v "sonarqube_data":"/opt/sonarqube/data" \
+          -v "sonarqube_logs":"/opt/sonarqube/logs" \
+          -v "sonarqube_extensions":"/opt/sonarqube/extensions" \
+          sonarqube:10.6.0-developer
     
     - name: Dart Scan SSL
-      if: false
       uses: antonioaversa/sonarqube-scan-action@master
       env:
         SONAR_HOST_URL: http://localhost:4443
@@ -117,6 +125,16 @@ jobs:
       with:
         args: -Dsonar.projectKey=dart-project -Dsonar.login=admin -Dsonar.password=admin --debug
         projectBaseDir: ./dart-project
+
+    - name: Dart Scan
+      if: false
+      uses: antonioaversa/sonarqube-scan-action@master
+      env:
+        SONAR_HOST_URL: http://localhost:9000
+      with:
+        args: -Dsonar.projectKey=dart-project -Dsonar.login=admin -Dsonar.password=admin --debug
+        projectBaseDir: ./dart-project
+        scannerVersion: 6.1.0.4477  
 
   sonarqube-9_9_7-developer-js:
     strategy:
