@@ -5,7 +5,7 @@ services:
     ports:
       - 9000:9000
     healthcheck:
-      test: ['grep -Fq \"SonarQube is operational\" /opt/sonarqube/logs/sonar.log']
+      test: 'grep -Fq \"SonarQube is operational\" /opt/sonarqube/logs/sonar.log'
       interval: 10s
       timeout: 5s
       retries: 20
