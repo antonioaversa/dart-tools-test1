@@ -44,8 +44,12 @@ jobs:
       with:
         # Disabling shallow clones is recommended for improving the relevancy of reporting
         fetch-depth: 0
+        
+    - name: Start nginx and SonarQube via Docker Compose
+      run: docker compose up
 
     - name: Start nginx and SonarQube
+      if: false
       run: |
         set -euxo pipefail
         /usr/bin/docker version --format '{{.Server.APIVersion}}'
