@@ -46,10 +46,11 @@ jobs:
         fetch-depth: 0
         
     - name: Start nginx and SonarQube via Docker Compose
+      if: false
       run: docker compose up
 
-    - name: Start nginx and SonarQube
-      if: false
+    - name: Start nginx and SonarQube using Docker networks
+      if: true
       run: |
         set -euxo pipefail
         /usr/bin/docker version --format '{{.Server.APIVersion}}'
