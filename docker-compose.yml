@@ -1,23 +1,17 @@
 services:
   sonarqube:
     image: sonarqube:10.7.0-developer
-    container_name: sonarqube
     ports:
       - 9000:9000
     healthcheck:
-      test: 'grep -Fq \"SonarQube is operational\" /opt/sonarqube/logs/sonar.log'
+      test: 'grep -Fq "SonarQube is operational" /opt/sonarqube/logs/sonar.log'
       interval: 10s
       timeout: 5s
       retries: 20
-      start_period: 3m
-    #volumes:
-    #  - ./sonarqube_data:/opt/sonarqube/data
-    #  - ./sonarqube_logs:/opt/sonarqube/logs
-    #  - ./sonarqube_extensions:/opt/sonarqube/extensions
+      start_period: 2m
 
   https-proxy:
     image: nginx
-    container_name: https-proxy
     ports:
       - 4443:4443
     volumes:
@@ -28,8 +22,3 @@ services:
     depends_on:
       sonarqube:
         condition: service_healthy
-#volumes:
-#  sonarqube_data:
-#  sonarqube_logs:
-#  sonarqube_extensions:
-  
