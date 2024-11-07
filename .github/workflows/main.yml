@@ -15,18 +15,6 @@ jobs:
   sonarqube-10_7_0-developer:
     runs-on: ubuntu-latest
     services:
-      https-proxy:
-       image: nginx
-       volumes:
-         - $GITHUB_WORKSPACE/nginx.conf:/etc/nginx/nginx.conf:ro
-         - $GITHUB_WORKSPACE/client_certs/ca.crt:/etc/nginx/client_certs/ca.crt:ro
-         - $GITHUB_WORKSPACE/server_certs/server.crt:/etc/nginx/server.crt:ro
-         - $GITHUB_WORKSPACE/server_certs/server.key:/etc/nginx/server.key:ro
-       ports:
-         - 4443:4443
-       options: >-
-         --network sq 
-
       sonarqube:
        image: sonarqube:10.6.0-developer
        volumes:
@@ -38,7 +26,6 @@ jobs:
          --health-interval 10s
          --health-timeout 5s
          --health-retries 10
-         --network sq 
           
     steps:
     - uses: actions/checkout@v4
@@ -93,6 +80,7 @@ jobs:
           sonarqube:10.6.0-developer
     
     - name: Dart Scan SSL
+      if: false
       uses: antonioaversa/sonarqube-scan-action@master
       env:
         SONAR_HOST_URL: http://localhost:4443
@@ -134,14 +122,13 @@ jobs:
         projectBaseDir: ./dart-project
 
     - name: Dart Scan
-      if: false
-      uses: antonioaversa/sonarqube-scan-action@master
+      if: true
+      uses: sonarsource/sonarqube-scan-action@antonio/add-warning-docker-removal
       env:
         SONAR_HOST_URL: http://localhost:9000
       with:
         args: -Dsonar.projectKey=dart-project -Dsonar.login=admin -Dsonar.password=admin --debug
         projectBaseDir: ./dart-project
-        scannerVersion: 6.1.0.4477  
 
   sonarqube-9_9_7-developer-js:
     strategy:
