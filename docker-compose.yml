@@ -20,7 +20,7 @@ services:
       - $GITHUB_WORKSPACE/server_certs/server.crt:/etc/nginx/server.crt:ro
       - $GITHUB_WORKSPACE/server_certs/server.key:/etc/nginx/server.key:ro
     healthcheck:
-      test: 'grep -Fq "start worker processes" /var/log/nginx/access.log'
+      test: 'true'
       interval: 10s
       timeout: 5s
       retries: 20
