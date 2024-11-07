@@ -47,7 +47,7 @@ jobs:
         fetch-depth: 0
         
     - name: Start nginx and SonarQube via Docker Compose
-      if: false
+      if: true
       run: docker compose up
 
     - name: Start nginx and SonarQube using Docker networks
@@ -93,6 +93,7 @@ jobs:
           sonarqube:10.6.0-developer
     
     - name: Dart Scan SSL
+      if: true
       uses: antonioaversa/sonarqube-scan-action@master
       env:
         SONAR_HOST_URL: http://localhost:4443
