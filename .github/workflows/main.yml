@@ -48,7 +48,8 @@ jobs:
         
     - name: Start nginx and SonarQube via Docker Compose
       if: true
-      run: docker compose up -d
+      run: |
+        docker compose up -d --wait
 
     - name: Start nginx and SonarQube using Docker networks
       if: false
