@@ -97,7 +97,7 @@ jobs:
       if: true
       uses: antonioaversa/sonarqube-scan-action@master
       env:
-        SONAR_HOST_URL: http://localhost:4443
+        SONAR_HOST_URL: https://localhost:4443
         SONAR_ROOT_CERT: |
           -----BEGIN CERTIFICATE-----
           MIIFlTCCA32gAwIBAgIUXK4LyGUFe4ZVL93StPXCoJzmnLMwDQYJKoZIhvcNAQEL
