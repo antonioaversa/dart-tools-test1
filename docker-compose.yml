@@ -19,9 +19,6 @@ services:
       - $GITHUB_WORKSPACE/client_certs/ca.crt:/etc/nginx/client_certs/ca.crt:ro
       - $GITHUB_WORKSPACE/server_certs/server.crt:/etc/nginx/server.crt:ro
       - $GITHUB_WORKSPACE/server_certs/server.key:/etc/nginx/server.key:ro
-    depends_on:
-      sonarqube:
-        condition: service_healthy
     healthcheck:
       test: 'grep -Fq "start worker processes" /var/log/nginx/access.log'
       interval: 10s
