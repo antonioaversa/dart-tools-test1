@@ -42,5 +42,6 @@ jobs:
       with:
         args: -Dsonar.projectKey=dart-project -Dsonar.login=admin -Dsonar.password=admin --debug
         projectBaseDir: ./dart-project
+        scannerVersion: 6.1.0.4477
         #scannerBinariesUrl: https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/
         scannerBinariesUrl: https://github.com/antonioaversa/dart-tools-test1/tree/main/binaries
