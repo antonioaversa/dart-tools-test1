@@ -36,7 +36,7 @@ jobs:
         fetch-depth: 0
 
     - name: Dart Scan
-      uses: sonarsource/sonarqube-scan-action@antonio/binaries-url-config
+      uses: sonarsource/sonarqube-scan-action@antonio/support-for-missing-keytool
       env:
         SONAR_HOST_URL: http://localhost:9000
       with:
