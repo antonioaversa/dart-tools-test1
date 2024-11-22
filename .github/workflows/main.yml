@@ -43,5 +43,7 @@ jobs:
         args: -Dsonar.projectKey=dart-project -Dsonar.login=admin -Dsonar.password=admin --debug
         projectBaseDir: ./dart-project
         scannerVersion: 6.1.0.4477
-        #scannerBinariesUrl: https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/
-        #scannerBinariesUrl: https://github.com/antonioaversa/dart-tools-test1/raw/refs/heads/main/binaries
+      #scannerBinariesUrl: https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/
+      #scannerBinariesUrl: https://github.com/antonioaversa/dart-tools-test1/raw/refs/heads/main/binaries
+    - uses: sonarsource/sonarqube-quality-gate-action@v1
+      timeout-minutes: 5
