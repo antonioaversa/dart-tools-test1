@@ -12,15 +12,6 @@ on:
 
 name: Main Workflow
 jobs:
-  test-golang:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run the build process with Docker
-        uses: addnab/docker-run-action@v3
-        with:
-          image: golang
-          run: |
-            curl https://google.com
   sonarqube-10_7_0-developer:
     runs-on: ubuntu-latest
     services:
@@ -45,7 +36,7 @@ jobs:
         fetch-depth: 0
 
     - name: Dart Scan
-      uses: sonarsource/sonarqube-scan-action@antonio/support-for-missing-keytool
+      uses: sonarsource/sonarqube-scan-action@v4.1.0
       env:
         SONAR_HOST_URL: http://localhost:9000
       with:
