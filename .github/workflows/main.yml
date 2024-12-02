@@ -16,8 +16,8 @@ jobs:
   sonarqube-10_7_0-developer:
     name: Build, test & publish
     runs-on: ubuntu-latest
-    container:
-      image: node:20
+    #container:
+    #  image: node:20
 
     defaults:
       run:
