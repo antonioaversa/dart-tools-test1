@@ -102,7 +102,7 @@ jobs:
       env:
         RUNNER_DEBUG: 1
         # Workaround for https://github.com/actions/runner/issues/863
-        SONAR_USER_HOME: '/github/home'
+        SONAR_USER_HOME: '/github/home/.sonar'
       with:
         args: -Dsonar.projectKey=dart-project -Dsonar.login=admin -Dsonar.password=admin
         projectBaseDir: ./dart-project
