@@ -98,7 +98,7 @@ jobs:
     
     - name: Run sonar analysis
       id: sonar-analysis
-      uses: sonarsource/sonarqube-scan-action@v4.1.0
+      uses: antonioaversa/sonarqube-scan-action@dev
       env:
         RUNNER_DEBUG: 1      
       with:
