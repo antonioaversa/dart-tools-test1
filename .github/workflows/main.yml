@@ -95,14 +95,14 @@ jobs:
       if: false
       run: |
         docker compose up -d --wait
-    
+    # Workaround for https://github.com/actions/runner/issues/863
+    - name: Workaround for containerized environments
+      run: echo "SONAR_USER_HOME=$HOME/.sonar" >> $GITHUB_ENV
     - name: Run sonar analysis
       id: sonar-analysis
       uses: antonioaversa/sonarqube-scan-action@dev
       env:
         RUNNER_DEBUG: 1
-        # Workaround for https://github.com/actions/runner/issues/863
-        SONAR_USER_HOME: '/github/home/.sonar'
       with:
         args: -Dsonar.projectKey=dart-project -Dsonar.login=admin -Dsonar.password=admin
         projectBaseDir: ./dart-project
