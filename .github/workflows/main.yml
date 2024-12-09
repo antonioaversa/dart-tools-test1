@@ -100,7 +100,7 @@ jobs:
       run: echo "SONAR_USER_HOME=$HOME/.sonar" >> $GITHUB_ENV
     - name: Run sonar analysis
       id: sonar-analysis
-      uses: sonarsource/sonarqube-scan-action@antonio/split-for-cpp
+      uses: antonioaversa/sonarqube-scan-action@antonio/split-for-cpp
       env:
         RUNNER_DEBUG: 1
       with:
